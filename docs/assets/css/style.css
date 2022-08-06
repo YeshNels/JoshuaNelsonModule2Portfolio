@@ -1,10 +1,12 @@
 body {
     background-color: lightblue;
 }
-.grid {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(12, 1fr);
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
   }
 nav {
     background-color: black;
@@ -12,11 +14,29 @@ nav {
 nav a{
     color: white;
 }
-img {
-    width: 10%
+.portrait {
+    width: 200px;
 }
 .app {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+#project {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+@media screen and (min-width: 768px) {
+    .app {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (min-width: 992px) {
+    .app {
+        flex:0 0 33.333%;
+        max-width: 33.333%;
+    }
 }
