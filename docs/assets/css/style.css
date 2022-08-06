@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+}
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+  }
+nav {
+    background-color: black;
+}
+nav a{
+    color: white;
+}
+img {
+    width: 10%
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
